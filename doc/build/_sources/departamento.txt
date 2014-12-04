@@ -1,0 +1,12 @@
+.. empresa-0.3 documentation master file, created by
+   sphinx-quickstart on Thu Dec 04 05:05:30 2014.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Departamento
+===================================
+
+.. automodule:: src.Departamento
+    :members:
+    :undoc-members:
+    :special-members:
