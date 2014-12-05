@@ -1,21 +1,31 @@
 language: python
 python:
-- "2.7"
-
+    - "2.7"
+#command to install dependencies
+install:
+    - pip install pytest pytest-cov
+    - pip install coveralls
+    - pip install radon
+    - pip install pep8
+    - pip install mockito
+#command to run tests
+script:
+    - py.test --cov . --cov-report term-missing
+after_success:
+    - radon cc ./src
+    - radon cc ./tests
+    - radon raw ./src
+    - radon raw ./tests
+    - radon mi ./src
+    - radon mi ./tests
+    - pep8 --statistics ./src
+    - pep8 --statistics ./tests
+    - pep8 --count ./src
+    - pep8 --count ./tests
+    - coveralls
 notifications:
   email:
     recipients:
       - patriciajh1991@gmail.com
-    on_success: [always|never|change] # default: never
-    on_failure: [always|never|change] # default: always
-
-# command to install dependencies
-install:
-- pip install pytest pytest-cov
-- pip install radon
-- pip install pep8
-- pip install mockito
-
-# command to run tests
-script:
-- py.test --cov . --cov-report term-missing
+    on_success: never
+    on_failure: always
