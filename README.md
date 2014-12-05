@@ -1,1 +1,2 @@
-[![Build Status](https://travis-ci.org/patry-jh/empresa-0.3.svg)](https://travis-ci.org/patry-jh/empresa-0.3)
+[![Build Status](https://travis-ci.org/patry-jh/empresa-0.3.svg?branch=master)](https://travis-ci.org/patry-jh/empresa-0.3)
+[![Coverage Status](https://coveralls.io/repos/patry-jh/empresa-0.3/badge.png?branch=master)](https://coveralls.io/r/patry-jh/empresa-0.3?branch=master)
