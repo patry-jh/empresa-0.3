@@ -12,8 +12,7 @@ install:
 script:
     - py.test --cov . --cov-report term-missing
 after_success:
-    - radon cc ./src
-    - radon cc ./tests
+    - radon cc ./src , ./tests
     - radon raw ./src
     - radon raw ./tests
     - radon mi ./src
